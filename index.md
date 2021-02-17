@@ -1,27 +1,23 @@
-## Welcome to GitHub Pages
+## Welcome to YourClips Pages
 
-You can use the [editor on GitHub](https://github.com/taontech/YourClipsWeb/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+YourClips is committed to providing users with the most extreme clipboard experience. We help you optimize 95% of the usage scenarios and help users save valuable time
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Image](clips/33.png)
 
-### Markdown
+![Image](clips/44.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Features
 
+        '􀪂+C':        	Copy text as normal
+        '􀆕+C':        	Copy text and search it
+        '􀆝+􀪂+V':  		Active YourClips app
+        'J':            Select next item
+        'K':            Select pre item
+        'Q':            Hide app window
+        'X':            Delete selected item
+        '1-9'：         Paste item on next active app
+        '􀅇':           Paste selected item on next active app
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
 ```
