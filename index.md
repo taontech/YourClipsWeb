@@ -8,26 +8,37 @@ YourClips is committed to providing users with the most extreme clipboard experi
 
 ### Features
 
-        '􀪂+C':        	Copy text as normal
-        '􀆕+C':        	Copy text and search it
-        '􀆝+􀪂+V':  		Active YourClips app
-        'J':            Select next item
-        'K':            Select pre item
-        'Q':            Hide app window
-        'X':            Delete selected item
-        '1-9'：         Paste item on next active app
-        '􀅇':           Paste selected item on next active app
-```markdown
+```
+1.Yourclips protects the privacy of your clipboard. When you use a Mac computer, all apps have permission to access the contents of your clipboard. The contents you copy may be read by advertisers. If you don’t want apps without your consent To read the contents of the clipboard, please use YourClips. As long as you use YourClips to paste the contents, other apps cannot read the contents you copied.
 
-[Link](url) and ![Image](src)
+2.Option+C Help you search text in google very quickly, Select and Option+C. 
+3.YourClips saves your last 20 clipboard records
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+ShortCuts:
 
-### Jekyll Themes
+```js
+    'Command+C':        	Copy text as normal
+    'Option+C':        		Copy text and search it
+    'Shift+Command+V':  	Active YourClips app
+    'J':            			Select next item
+    'K':            			Select pre item
+    'Q':            			Hide app window
+    'X':            			Delete selected item
+    '1-9'：         			  Paste item on next active app
+    '􀅇':           			Paste selected item on next active app
+```
+Option+C Help you search text in google very quickly, Select and Option+C. (Chinese User can change to Baidu)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/taontech/YourClipsWeb/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Each content has a corresponding number, press the corresponding number on the keyboard to quickly paste the corresponding entry
+
+<img src="clips/1613464977028.jpg" alt="Image" style="zoom:50%;" />
+
+<img src="clips/1613465180262.jpg" alt="Image" style="zoom:50%;" />
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+Any questions, please contact Taontech@gmail.com
+```
+
