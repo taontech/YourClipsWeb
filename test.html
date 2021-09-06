@@ -31,11 +31,11 @@
 </div>
 </div>
 <BODY>
-
+    <meta name="viewport" content="width=width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <style>
 div#card{
-    width: 250px;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+    width: device-width;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3), 0px 6px 20px 0px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 div#header {
@@ -53,24 +53,24 @@ padding: 10px;
      location.reload();
    }
    window.onhashchange = locationHashChanged;
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/YourClipsWeb/note.js', { scope: '/YourClipsWeb/' }).then(function(reg) {
-
-    if(reg.installing) {
-      console.log('Service worker installing');
-    } else if(reg.waiting) {
-      console.log('Service worker installed');
-    } else if(reg.active) {
-      console.log('Service worker active');
-    }
-
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-}else{
-    console.log('no serviceWorker');
-}
+<!--if ('serviceWorker' in navigator) {-->
+<!--  navigator.serviceWorker.register('/YourClipsWeb/note.js', { scope: '/YourClipsWeb/' }).then(function(reg) {-->
+<!---->
+<!--    if(reg.installing) {-->
+<!--      console.log('Service worker installing');-->
+<!--    } else if(reg.waiting) {-->
+<!--      console.log('Service worker installed');-->
+<!--    } else if(reg.active) {-->
+<!--      console.log('Service worker active');-->
+<!--    }-->
+<!---->
+<!--  }).catch(function(error) {-->
+<!--    // registration failed-->
+<!--    console.log('Registration failed with ' + error);-->
+<!--  });-->
+<!--}else{-->
+<!--    console.log('no serviceWorker');-->
+<!--}-->
 
 //document.getElementsById("innn").innerHTML = 'xxx';
 

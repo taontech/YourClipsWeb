@@ -1,10 +1,10 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open('v2').then(function(cache) {
       return cache.addAll([
         '/YourClipsWeb/',
-        '/YourClipsWeb/test.html',
-        '/YourClipsWeb/note.js'
+        '/YourClipsWeb/test.html'
+        '/test.html'
       ]);
     })
   );
@@ -23,7 +23,7 @@ self.addEventListener('fetch', function(event) {
         // and serve second one
         let responseClone = response.clone();
         
-        caches.open('v1').then(function (cache) {
+        caches.open('v2').then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
