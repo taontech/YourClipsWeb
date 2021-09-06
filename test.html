@@ -20,7 +20,7 @@ function GetRequest() {
 
 <script type="text/javascript">
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/note.js', { scope: '/' }).then(function(reg) {
+  navigator.serviceWorker.register('/YourClipsWeb/note.js', { scope: '/YourClipsWeb/' }).then(function(reg) {
 
     if(reg.installing) {
       console.log('Service worker installing');
