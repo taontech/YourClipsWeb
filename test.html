@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<!--<html manifest="note.appcache">-->
+<BODY>
+<Script language="javascript">
+function GetRequest() {
+   // var url = location.search; //获取url中"?"符后的字串
+   var url = location.hash; //#
+   url = decodeURI(url);
+   var theRequest = new Object();
+   if (url.indexOf("#") != -1) {
+      var str = url.substr(1);
+      // strs = str.split("&");
+      //for(var i = 0; i < strs.length; i ++) {
+         theRequest["c"]=unescape(str);
+      //}
+   }
+   return theRequest;
+}
+</Script>
+
+<script type="text/javascript">
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/note.js', { scope: '/' }).then(function(reg) {
+
+    if(reg.installing) {
+      console.log('Service worker installing');
+    } else if(reg.waiting) {
+      console.log('Service worker installed');
+    } else if(reg.active) {
+      console.log('Service worker active');
+    }
+
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}else{
+    console.log('no serviceWorker');
+}
+var Request = new Object();
+Request = GetRequest();
+
+document.write(Request["c"]);
+</Script>
