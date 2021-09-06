@@ -19,6 +19,10 @@ function GetRequest() {
 </Script>
 
 <script type="text/javascript">
+   function locationHashChanged() {
+     location.reload();
+   }
+   window.onhashchange = locationHashChanged;
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/YourClipsWeb/note.js', { scope: '/YourClipsWeb/' }).then(function(reg) {
 
