@@ -3,7 +3,8 @@ self.addEventListener('install', function(event) {
     caches.open('v2').then(function(cache) {
       return cache.addAll([
         '/YourClipsWeb/',
-        '/YourClipsWeb/test.html'
+        '/YourClipsWeb/test.html',
+        '/YourClipsWeb/note.js',
         '/test.html'
       ]);
     })
