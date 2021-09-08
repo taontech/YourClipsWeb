@@ -4,6 +4,7 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/YourClipsWeb/',
         '/YourClipsWeb/test.html',
+        '/YourClipsWeb/note.js',
         '/test.html'
       ]);
     })
