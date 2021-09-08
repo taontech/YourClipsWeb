@@ -9,7 +9,7 @@
        var theRequest = new Object();
        if (url.indexOf("#") != -1) {
           var str = url.substr(1);
-          var strs = str.split("?");
+          var strs = str.split("%3F");
           theRequest["c"]=unescape(strs[0]);
 
           for(var i = 1; i < strs.length; i ++) {
