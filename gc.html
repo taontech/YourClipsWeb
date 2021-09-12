@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--<html manifest="note.appcache">-->
+<BODY>
+    <Script language="javascript">
+    function GetRequest() {
+       // var url = location.search; //获取url中"?"符后的字串
+       var url = location.hash; //#
+       url = decodeURI(url);
+       var theRequest = new Object();
+       if (url.indexOf("#") != -1) {
+          var str = url.substr(1);
+          var strs = str.split("%3F");
+          theRequest["c"]=unescape(strs[0]);
+
+          for(var i = 1; i < strs.length; i ++) {
+             //theRequest["c"]=unescape(str);
+             var params = strs[i];
+             var pars = params.split("=")
+             theRequest[pars[0]]=pars[1]
+          }
+          if(theRequest["b"] == undefined){
+          	theRequest['b'] = "black";
+          }
+       }
+       return theRequest;
+    }
+    </Script>
+<div id="box">
+    <p class="animate">
+        <Script >
+        var Request = new Object();
+        Request = GetRequest();
+        document.write(Request["c"]);
+        bcolor = Request["b"];
+        </Script>
+    </p>
+</div>
+<BODY>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<style>
+div#card{
+    border-radius: 15px;
+    width: device-width;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3), 0px 6px 20px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+div#header {
+border-radius: 15px 15px 0px 0px;
+background-color: Request["b"];
+color: white;
+padding: 10px;
+font-size: 40px;
+animation:myfirst 2s;
+    -webkit-animation:myfirst 2s; /* Safari and Chrome */
+}
+    @keyframes myfirst
+    {
+        0%   {background: white;}
+        100%  {background: Request["b"];}
+           
+    }
+
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+        0%   {background: white;}
+        100%  {background: Request["b"];}
+    }
+div#container {
+padding: 5px;
+}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        div#box {
+            width: 120%;
+            height: 500px;
+            margin: -50 auto;
+            /*border: 1px solid #ff6700;*/
+            overflow: hidden;
+            background-color: Request["b"];
+        }
+ 
+        .animate {
+            padding-left: 20px;
+            font-size: 320px;
+            color: #fff;
+            display: inline-block;
+            white-space: nowrap;
+            animation: 10s wordsLoop linear infinite normal;
+        }
+ 
+        @keyframes wordsLoop {
+            0% {
+                transform: translateX(100%);
+                -webkit-transform: translateX(500px);
+            }
+            100% {
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+            }
+        }
+ 
+        @-webkit-keyframes wordsLoop {
+            0% {
+                transform: translateX(200px);
+                -webkit-transform: translateX(500px);
+            }
+            100% {
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+            }
+        }
+</style>
+<script type="text/javascript">
+    //document.getElementById("header").style.background-color = "blue";
+    document.getElementById("box").style.backgroundColor = Request["b"];
+   function locationHashChanged() {
+     location.reload();
+   }
+   window.onhashchange = locationHashChanged;
+   if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/YourClipsWeb/note.js', { scope: '/YourClipsWeb/' }).then(function(reg) {
+        if(reg.installing) {
+          console.log('Service worker installing');
+        } else if(reg.waiting) {
+          console.log('Service worker installed');
+        } else if(reg.active) {
+          console.log('Service worker active');
+        }
+        }).catch(function(error) {
+            // registration failed
+            console.log('Registration failed with ' + error);
+        });
+   }else{
+    console.log('no serviceWorker');
+   }
+
+//document.getElementsById("innn").innerHTML = 'xxx';
+
+</Script>
+
